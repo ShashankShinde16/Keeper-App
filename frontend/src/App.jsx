@@ -17,7 +17,7 @@ useEffect(() => {
     // Fetch data from the server when the component mounts
     async function fetchData() {
       try {
-        const response = await fetch('http://localhost:5000/');
+        const response = await fetch('https://keeper-app-backend-ai76.onrender.com/');
         if (response.ok) {
           const data = await response.json();
           setNotes(data);
@@ -39,7 +39,7 @@ useEffect(() => {
     //   })
     // })
     try {
-      const response = await fetch('http://localhost:5000/delete', {
+      const response = await fetch('https://keeper-app-backend-ai76.onrender.com/delete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
